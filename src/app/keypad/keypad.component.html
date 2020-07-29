@@ -1,0 +1,100 @@
+<div class='container-fluid'>
+    <div class="row py-3">
+        <div class="col-lg-5 border-right">
+            <div>
+                <table class='table table-sm table-borderless'>
+                    <tr *ngFor="let l of finalRachana">
+                        <td class="text-right">{{l[0]}}</td>
+                        <td class="text-center"><u>{{l[1]}}</u></td>
+                        <td class="text-center"><u>{{l[2]}}</u></td>
+                        <td class="text-center">{{l[3]}}</td>
+                        <td class="text-center"><u>{{l[4]}}</u></td>
+                        <td class="text-center"><u>{{l[5]}}</u></td>
+                        <td class="text-center">{{l[6]}}</td>
+                        <td class="text-center"><u>{{l[7]}}</u></td>
+                        <td class="text-center"><u>{{l[8]}}</u></td>
+                        <td class="text-center">{{l[9]}}</td>
+                        <td class="text-center"><u>{{l[10]}}</u></td>
+                        <td class="text-center"><u>{{l[11]}}</u></td>
+                        <td class="text-left">{{l[12]}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div>
+                        <button class="btn btn-success" (click)="captureMeta('kerva')">केरवा-१२०</button>
+                        <button class="btn btn-success" (click)="captureMeta('khemta')">खेमटा-३६०</button>
+                        <span class='px-3'>ताल</span><span class="px-3 border border-info">{{taal}}</span><br /><br />
+                    </div>
+                    <div *ngIf="ifKerva">
+                        <button class="btn btn-success rounded-circle" (click)="captureMeta('1')">१</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureMeta('2')">२</button>
+                        <!-- <button class="btn btn-success rounded-circle" (click)="captureMeta('3')">३</button> -->
+                        <button class="btn btn-success rounded-circle" (click)="captureMeta('4')">४</button>
+                        <span class='px-3'>एक मात्रा में स्वरों की संख्या</span><span
+                            class="px-3 border border-info">{{swarankFix}}</span><br /><br />
+                    </div>
+                    <div>
+                        <button class="btn btn-success rounded-circle" (click)="captureMeta('8')">८</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureMeta('16')">१६</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureMeta('32')">३२</button>
+                        <span class="px-3">चरण में मात्राओं की कुल संख्या</span><span
+                            class="px-3 border border-info">{{matrankFix}}</span><br /><br />
+                    </div>
+                    <div>
+                        <button class="btn btn-success kerva" (click)="captureMeta('intro')">प्रस्तावपद</button>
+                        <button class="btn btn-success kerva" (click)="captureMeta('bridge')">सेतुपद</button><span
+                            class="px-3">चरण प्रकार</span><span
+                            class="px-3 border border-info">{{charanType}}</span><br /><br />
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-5"> -->
+                    <div>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('म़॑')">म़॑</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('प़')">प़</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ध़॒')">ध़॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ध़')">ध़</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ऩि॒')">ऩि॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ऩि')">ऩि</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('स')">स</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('री॒')">री॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('री')">री</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ग॒')">ग॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ग')">ग</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('म')">म</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('म॑')">म॑</button><br /><br />
+                        <!--  <button class="btn px-3"></button> -->
+                    </div>
+                    <div style="padding-left: 2.1rem !important;">
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('प')">प</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ध॒')">ध॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ध')">ध</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('नि॒')">नि॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('नि')">नि</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('सं')">सं</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('रीं')">रीं॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('रीं')">रीं</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('गं॒')">गं॒</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('गं')">गं</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('मं')">मं</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('मऺं')">मऺं</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('पं')">पं</button>
+                        <br /><br />
+                    </div>
+                    <div>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('-')">-</button>
+                        <button class="btn btn-success rounded-circle" (click)="captureIt('ऽ')">ऽ</button>
+                        <!-- <button class="btn btn-success" (click)="captureIt(':')">:</button> -->
+                        <button class="btn btn-success" (click)="correct()">सुधारे</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 border-left">
+                    <span class="text-dark">{{swarmatra}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
